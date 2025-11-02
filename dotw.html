@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Day of the Week Messages</title>
+<style>
+  body {
+    font-family: sans-serif;
+    text-align: center;
+    padding: 2em;
+    background: #f9f9f9;
+  }
+  .dayMessage {
+    display: none;
+    padding: 1.5em;
+    margin: 1em auto;
+    max-width: 500px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  .dayMessage img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 1em;
+    border-radius: 10px;
+  }
+</style>
+</head>
+<body>
+
+<!-- 7-day messages -->
+<div id="sunday" class="dayMessage">
+  <h2>🌞 Sunday Funday!</h2>
+  <p>Relax, recharge, and enjoy your day.</p>
+  <img src="https://via.placeholder.com/400x200?text=Sunday" alt="Sunday">
+</div>
+
+<div id="monday" class="dayMessage">
+  <h2>💪 Monday Motivation!</h2>
+  <p>Start the week strong and energized!</p>
+  <img src="https://via.placeholder.com/400x200?text=Monday" alt="Monday">
+</div>
+
+<div id="tuesday" class="dayMessage">
+  <h2>🎨 Tuesday Creativity!</h2>
+  <p>Let your imagination run wild today.</p>
+  <img src="https://via.placeholder.com/400x200?text=Tuesday" alt="Tuesday">
+</div>
+
+<div id="wednesday" class="dayMessage">
+  <h2>📚 Wednesday Wisdom!</h2>
+  <p>Learn something new and share it.</p>
+  <img src="https://via.placeholder.com/400x200?text=Wednesday" alt="Wednesday">
+</div>
+
+<div id="thursday" class="dayMessage">
+  <h2>⚡ Thursday Energy!</h2>
+  <p>Keep the momentum going — almost Friday!</p>
+  <img src="https://via.placeholder.com/400x200?text=Thursday" alt="Thursday">
+</div>
+
+<div id="friday" class="dayMessage">
+  <h2>🎉 Friday Fun!</h2>
+  <p>Celebrate your wins and relax.</p>
+  <img src="https://via.placeholder.com/400x200?text=Friday" alt="Friday">
+</div>
+
+<div id="saturday" class="dayMessage">
+  <h2>🏖️ Saturday Chill!</h2>
+  <p>Take it easy and enjoy your weekend.</p>
+  <img src="https://via.placeholder.com/400x200?text=Saturday" alt="Saturday">
+</div>
+
+<script>
+  const days = ["sunday","monday","tuesday","wednesday","thursday","friday","saturday"];
+  const today = new Date().getDay(); // 0=Sunday
+  const todayDiv = document.getElementById(days[today]);
+  if(todayDiv) todayDiv.style.display = "block";
+</script>
+
+</body>
+</html>
