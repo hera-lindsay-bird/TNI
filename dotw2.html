@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Library Day Messages</title>
+<style>
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+    padding: 2em;
+    background: #f0f8ff;
+  }
+
+.dayMessage {
+display: none;
+padding: 2em;
+margin: 2em auto;
+max-width: 600px;
+background: #ffffff;
+border-radius: 15px;
+box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+transition: opacity 1s ease-in-out;
+opacity: 0;
+}
+
+.dayMessage.show {
+display: block;
+opacity: 1;
+}
+
+.dayMessage img {
+max-width: 100%;
+height: auto;
+border-radius: 10px;
+margin-top: 1em;
+} </style>
+
+</head>
+<body>
+<div id="dayName"></div>
+
+<div id="mondayMessage" class="dayMessage">
+  <h2>THE TAHUNA NORMAL LIBRARY IS OPEN FROM 9.30 TO 3PM</h2>
+  <p>SHHH! MONDAY IS A SILENT READING DAY</p>
+  <img src="https://via.placeholder.com/400x200?text=Monday+Image" alt="Monday Image">
+</div>
+
+<div id="tuesdayMessage" class="dayMessage">
+  <h2>THE TAHUNA NORMAL LIBRARY IS OPEN FROM 9.30 TO 3PM</h2>
+  <p>TUESDAY IS FOR READING, QUIET CONVERSATION, CLUBS AND GAMES!</p>
+  <img src="https://via.placeholder.com/400x200?text=Tuesday+Image" alt="Tuesday Image">
+</div>
+
+<div id="wednesdayMessage" class="dayMessage">
+  <h2>THE TAHUNA NORMAL LIBRARY IS OPEN FROM 9.30 TO 3PM</h2>
+  <p>WEDNESDAY IS NATURE DOCUMENTARY DAY. QUIET CONVERSATION ONLY</p>
+  <img src="https://via.placeholder.com/400x200?text=Wednesday+Image" alt="Wednesday Image">
+</div>
+
+<div id="thursdayMessage" class="dayMessage">
+  <h2>TODAY IS A GOLD CARD DAY!</h2>
+  <p>OPEN MORNING BREAK AND LUNCHTIME. PLEASE BE RESPECTFUL OF OUR AMAZING STUDENT LIBRARIANS.</p>
+  <img src="https://via.placeholder.com/400x200?text=Thursday+Image" alt="Thursday Image">
+</div>
+
+<div id="fridayMessage" class="dayMessage">
+  <h2>TODAY IS A GOLD CARD DAY!</h2>
+  <p>OPEN MORNING BREAK AND LUNCHTIME. PLEASE BE RESPECTFUL OF OUR AMAZING STUDENT LIBRARIANS.</p>
+  <img src="https://via.placeholder.com/400x200?text=Friday+Image" alt="Friday Image">
+</div>
+
+<div id="saturdayMessage" class="dayMessage">
+  <h2>TODAY IS A WEEKEND</h2>
+  <p>WHY ARE YOU LOOKING AT THE LIBRARY WEBPAGE? 😏</p>
+  <img src="https://via.placeholder.com/400x200?text=Saturday+Image" alt="Saturday Image">
+</div>
+
+<div id="sundayMessage" class="dayMessage">
+  <h2>TODAY IS A WEEKEND</h2>
+  <p>WHY ARE YOU LOOKING AT THE LIBRARY WEBPAGE? 😏</p>
+  <img src="https://via.placeholder.com/400x200?text=Sunday+Image" alt="Sunday Image">
+</div>
+
+<script>
+  const days = ["sunday","monday","tuesday","wednesday","thursday","friday","saturday"];
+  const today = new Date().getDay(); // 0 = Sunday, 1 = Monday, etc.
+  const todayName = days[today];
+  const dayMessageId = todayName + "Message";
+  const todayMessageDiv = document.getElementById(dayMessageId);
+
+  if(todayMessageDiv){
+    todayMessageDiv.classList.add("show");
+  }
+</script>
+
+</body>
+</html>
